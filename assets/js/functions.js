@@ -2,7 +2,7 @@ $(function(){
 
   new WOW().init();
 
-  if(top.location.pathname === '/nQuanta/index.html') {
+  if(top.location.pathname === 'sseeaann.net/nQuanta/index.html') {
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
         var target = $(this.hash);
@@ -17,7 +17,7 @@ $(function(){
     });
   }
 
-  if(top.location.pathname !== '/nQuanta/index.html') {
+  if(top.location.pathname !== 'sseeaann.net/nQuanta/index.html') {
     $('.navbar').addClass('scrollNav');
   }
 
@@ -26,7 +26,7 @@ $(function(){
   }
 
   $(window).resize(function() {
-    if(top.location.pathname === '/nQuanta/index.html') {
+    if(top.location.pathname === 'sseeaann.net/nQuanta/index.html') {
       if($(window).width() <= 752) {
         $('.navbar').addClass('scrollNav');
       } else {
