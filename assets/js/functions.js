@@ -2,7 +2,8 @@ $(function(){
 
   new WOW().init();
 
-  if(top.location.pathname === 'http://sseeaann.github.io/nQuanta4') {
+  // if(top.location.pathname === '/') {
+  if(top.location.pathname === '/nQuanta/' || top.location.pathname === '/nQuanta/index.html') {
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
         var target = $(this.hash);
@@ -17,7 +18,8 @@ $(function(){
     });
   }
 
-  if(top.location.pathname !== 'http://sseeaann.github.io/nQuanta4') {
+  // if(top.location.pathname !== '/') {
+  if(top.location.pathname === '/nQuanta4/faq.html' || top.location.pathname === '/nQuanta4/privacy.html' || top.location.pathname === '/nQuanta4/terms.html') {
     $('.navbar').addClass('scrollNav');
   }
 
@@ -26,7 +28,8 @@ $(function(){
   }
 
   $(window).resize(function() {
-    if(top.location.pathname === 'http://sseeaann.github.io/nQuanta4') {
+    // if(top.location.pathname === '/') {
+    if(top.location.pathname === '/nQuanta/' || top.location.pathname === '/nQuanta/index.html') {
       if($(window).width() <= 752) {
         $('.navbar').addClass('scrollNav');
       } else {
@@ -38,7 +41,8 @@ $(function(){
   $(window).scroll(function(){
     var wScroll = $(this).scrollTop();
 
-    if($(window).width() > 752 && top.location.pathname === '/') {
+    // if($(window).width() > 752 && top.location.pathname === '/') {
+    if($(window).width() > 752 && top.location.pathname === '/nQuanta/' || top.location.pathname === '/nQuanta/index.html') {
       if(wScroll >= 1) {
         $('.navbar').addClass('scrollNav');
       } else {
