@@ -1,10 +1,33 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100|Lora:700);
 body {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  position: relative; }
 
 nav.navbar {
   border-radius: 0;
-  margin: 0; }
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  box-shadow: none;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.25), transparent);
+  background: linear-gradient(rgba(0, 0, 0, 0.25), transparent);
+  transition: all 500ms ease; }
+  nav.navbar .navbar-toggle .icon-bar {
+    background: #2196f3; }
+  nav.navbar .navbar-nav li a {
+    color: white; }
+    nav.navbar .navbar-nav li a:hover {
+      color: #2196f3; }
+  nav.navbar.scrollNav {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    background: white; }
+    nav.navbar.scrollNav .navbar-nav li a {
+      color: #2196f3; }
+      nav.navbar.scrollNav .navbar-nav li a:hover {
+        color: #00479B; }
   nav.navbar .container .navbar-header .navbar-brand {
     padding: 5px 15px 0; }
     nav.navbar .container .navbar-header .navbar-brand #z-logo {
@@ -59,17 +82,19 @@ p {
   -ms-flex-pack: center; }
 
 header {
-  height: 700px;
+  height: 750px;
   background-image: url(../img/laptop-lady3.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   overflow: hidden; }
   header .container {
     height: 100%; }
     header .container .header-content {
       color: white;
-      margin-top: 150px; }
+      margin-top: 150px;
+      padding-left: 150px; }
       header .container .header-content h1 {
         font-weight: 300;
         margin: 0;
@@ -99,17 +124,9 @@ header {
           color: black;
           text-decoration: none; }
 
-@media (max-width: 775px) {
-  header .container {
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    box-pack: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -o-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center; } }
+@media (max-width: 991px) {
+  header .container .header-content {
+    padding-left: 0; } }
 @media (max-width: 405px) {
   header .container .header-content h1 {
     font-size: 15vw; } }
@@ -147,11 +164,13 @@ section#process {
     transform: none; } }
 section#porthole {
   height: 400px;
-  background-image: url(../img/looking-forward.jpg);
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/looking-forward.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/looking-forward.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.3), inset 0px -1px 2px 0px rgba(0, 0, 0, 0.3); }
+  box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.3), inset 0px -1px 2px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden; }
   section#porthole .container {
     height: 100%;
     position: relative; }
@@ -169,7 +188,7 @@ section#porthole {
         font-weight: 700;
         text-shadow: -1px 2px 1px rgba(0, 0, 0, 0.5); }
         section#porthole .container .porthole-content p:nth-of-type(1) {
-          color: #00479B; }
+          color: #2196f3; }
         section#porthole .container .porthole-content p:nth-of-type(2) {
           color: #5EDB61; }
 
@@ -193,7 +212,8 @@ section#upload .container {
     flex-direction: column;
     -ms-flex-direction: column; }
     section#upload .container #upload-content h2 {
-      margin: 0 0 50px; }
+      margin: 0 0 50px;
+      color: #2196f3; }
   section#upload .container #upload-zone #dropzone {
     background: #e7e7e7;
     height: 450px;
@@ -209,13 +229,24 @@ section#upload .container {
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
     flex-direction: column;
-    -ms-flex-direction: column; }
+    -ms-flex-direction: column;
+    transition: all 300ms ease; }
     section#upload .container #upload-zone #dropzone:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      -o-transform: scale(1.05);
+      transform: scale(1.05);
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+      background: white; }
 
 @media (max-width: 991px) {
   section#upload .container {
     padding: 75px 0 100px; } }
+@media (max-width: 600px) {
+  section#upload .container #upload-content h2 {
+    font-size: 7vw; } }
 @media (max-width: 500px) {
   section#upload .container #upload-zone {
     margin-top: 50px; }

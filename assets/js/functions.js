@@ -15,4 +15,29 @@ $(function(){
     }
   });
 
+  if($(window).width() <= 752) {
+    $('.navbar').addClass('scrollNav');
+  }
+
+  $(window).resize(function() {
+    if($(window).width() <= 752) {
+      $('.navbar').addClass('scrollNav');
+    } else {
+      $('.navbar').removeClass('scrollNav');
+    }
+  });
+
+  $(window).scroll(function(){
+    var wScroll = $(this).scrollTop();
+
+    if($(window).width() > 752) {
+      if(wScroll >= 1) {
+        $('.navbar').addClass('scrollNav');
+      } else {
+        $('.navbar').removeClass('scrollNav');
+      }
+    }
+
+  });
+
 });
