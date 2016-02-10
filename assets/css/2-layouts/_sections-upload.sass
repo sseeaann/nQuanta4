@@ -1,0 +1,45 @@
+section#upload
+
+  .container
+    padding: 100px 0
+
+    #upload-content
+      min-height: 450px
+      @include flex-direction(column)
+
+      h2
+        margin: 0 0 50px
+
+
+    #upload-zone
+      #dropzone
+        background: $gray
+        height: 450px
+        width: 450px
+        border: 5px solid $blue
+        border-radius: 5px
+        @include flex-direction(column)
+
+        &:hover
+          cursor: pointer
+
+@media (max-width: 991px)
+  section#upload
+    .container
+      padding: 75px 0 100px
+
+@media (max-width: 500px)
+  section#upload .container
+    #upload-zone
+      margin-top: 50px
+      
+      #dropzone
+        height: 250px
+        width: 250px
+
+        h3
+          font-size: 22px
+          margin: 0
+
+        p
+          font-size: 14px
