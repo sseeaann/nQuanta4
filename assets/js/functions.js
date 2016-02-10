@@ -42,7 +42,7 @@ $(function(){
     var wScroll = $(this).scrollTop();
 
     // if($(window).width() > 752 && top.location.pathname === '/') {
-    if($(window).width() > 752 && top.location.pathname === '/nQuanta/' || top.location.pathname === '/nQuanta/index.html') {
+    if($(window).width() > 752 && (top.location.pathname === '/nQuanta/' || top.location.pathname === '/nQuanta/index.html')) {
       if(wScroll >= 1) {
         $('.navbar').addClass('scrollNav');
       } else {
