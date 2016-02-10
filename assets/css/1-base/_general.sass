@@ -1,9 +1,42 @@
 body
   font-family: $Roboto
+  position: relative
 
 nav.navbar
   border-radius: 0
   margin: 0
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 1
+  box-shadow: none
+  @include background(linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0)))
+  transition: all 500ms ease
+
+  .navbar-toggle
+    .icon-bar
+      background: $blueLight
+
+  .navbar-nav
+    li
+      a
+        color: white
+
+        &:hover
+          color: $blueLight
+
+  &.scrollNav
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3)
+    background: white
+
+    .navbar-nav
+      li
+        a
+          color: $blueLight
+
+          &:hover
+            color: $blue
 
   .container
 

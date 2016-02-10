@@ -9,6 +9,7 @@ section#upload
 
       h2
         margin: 0 0 50px
+        color: $blueLight
 
 
     #upload-zone
@@ -19,20 +20,31 @@ section#upload
         border: 5px solid $blue
         border-radius: 5px
         @include flex-direction(column)
+        transition: all 300ms ease
 
         &:hover
           cursor: pointer
+          @include transform(scale(1.05))
+          box-shadow: 2px 2px 2px rgba(0,0,0,0.5)
+          background: lighten($gray, 10%)
 
 @media (max-width: 991px)
   section#upload
     .container
       padding: 75px 0 100px
 
+@media (max-width: 600px)
+  section#upload .container
+    #upload-content
+      h2
+        font-size: 7vw
+
+
 @media (max-width: 500px)
   section#upload .container
     #upload-zone
       margin-top: 50px
-      
+
       #dropzone
         height: 250px
         width: 250px

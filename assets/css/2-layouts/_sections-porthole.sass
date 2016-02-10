@@ -1,11 +1,12 @@
 section#porthole
   height: 400px
+  @include background(linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/looking-forward.jpg))
   background:
-    image: url(../img/looking-forward.jpg)
     size: cover
     position: center
     attachment: fixed
   box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.3), inset 0px -1px 2px 0px rgba(0,0,0,0.3)
+  overflow: hidden
 
   .container
     height: 100%
@@ -23,7 +24,7 @@ section#porthole
         text-shadow: -1px 2px 1px rgba(0,0,0,0.5)
 
         &:nth-of-type(1)
-          color: $blue
+          color: $blueLight
 
         &:nth-of-type(2)
           color: $lime
