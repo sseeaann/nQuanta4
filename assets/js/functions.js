@@ -24,17 +24,21 @@ $(function(){
   }
 
   if($(window).width() <= 752) {
-    $('.navbar').addClass('scrollNav');
+    $('#indexNav').addClass('scrollNav');
   }
 
   $(window).resize(function() {
     // if(top.location.pathname === '/') {
-    if(top.location.pathname !== '/nQuanta4/faq.html' || top.location.pathname !== '/nQuanta4/privacy.html' || top.location.pathname !== '/nQuanta4/terms.html') {
-      if($(window).width() <= 752) {
-        $('.navbar').addClass('scrollNav');
-      } else {
-        $('.navbar').removeClass('scrollNav');
-      }
+    //   if($(window).width() <= 752) {
+    //     $('.navbar').addClass('scrollNav');
+    //   } else {
+    //     $('.navbar').removeClass('scrollNav');
+    //   }
+    // }
+    if($(window).width() <= 752) {
+      $('#indexNav').addClass('scrollNav');
+    } else {
+      $('#indexNav').removeClass('scrollNav');
     }
   });
 
@@ -42,13 +46,20 @@ $(function(){
     var wScroll = $(this).scrollTop();
 
     // if($(window).width() > 752 && top.location.pathname === '/') {
-    if(top.location.pathname !== '/nQuanta4/faq.html' || top.location.pathname !== '/nQuanta4/privacy.html' || top.location.pathname !== '/nQuanta4/terms.html') {
-      if($(window).width() > 752) {
-        if(wScroll >= 1) {
-          $('.navbar').addClass('scrollNav');
-        } else {
-          $('.navbar').removeClass('scrollNav');
-        }
+    //   if($(window).width() > 752) {
+    //     if(wScroll >= 1) {
+    //       $('.navbar').addClass('scrollNav');
+    //     } else {
+    //       $('.navbar').removeClass('scrollNav');
+    //     }
+    //   }
+    // }
+
+    if($(window).width() > 752) {
+      if(wScroll >= 1) {
+        $('#indexNav').addClass('scrollNav');
+      } else {
+        $('#indexNav').removeClass('scrollNav');
       }
     }
 
